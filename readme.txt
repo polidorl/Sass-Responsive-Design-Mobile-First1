@@ -2,4 +2,7 @@ Este proyecto fue desarrollado inicialmente con enfoque totalmente responsive, e
 se destaca la implementación de tecnologías Sass, aportando mayor flexibilidad y eficiencia al código.
 Sass permite estructurar el código en módulos reutilizables facilitando su mantenimiento y escalabilidad a largo plazo.
 
+https://polidorl.github.io/Sass-Responsive-Design-Mobile-First1/
+
+
  
