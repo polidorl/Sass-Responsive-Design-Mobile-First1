@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.83deg, #1d1c1a 16.69%, #f7931a 100%);
+}
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  align-self: center;
+}
+header .header--title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  margin-top: 40px;
+  text-align: center;
+  align-self: center;
+}
+header .header--title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #fff;
+}
+header .header--title-container p {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #ffe9d5;
+}
+header .header--title-container .header--button {
+  position: absolute;
+  left: calc(50% - 114.5px);
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: #faf8f7;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #201e1c;
+}
+header .header--title-container .header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("../assets/icons/down-arrow.svg");
+}
+
+main {
+  width: 100%;
+  height: auto;
+  background-color: #faf8f7;
+}
+main .main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding: 80px 0 30px;
+  text-align: center;
+}
+main .main-exchange-container .main-exchange-container--title {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+main .main-exchange-container .main-exchange-container--title h2 {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #201e1c;
+}
+main .main-exchange-container .main-exchange-container--title p {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #757575;
+}
+main .main-exchange-container .backgroundImg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url("../assets/imgs/Bitcoin.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-table-container {
+  display: flex;
+  margin: 0 30px;
+  gap: 20px;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.main-table-container .main-currency-table,
+.main-table-container .main-commissions-table {
+  scroll-snap-align: center;
+  padding: 20px;
+  margin: 25px 40px 10px 40px;
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+.main-table-container .main-currency-table .currency-table--title,
+.main-table-container .main-commissions-table .commissions-table--title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+}
+.main-table-container .main-currency-table .currency-table--title {
+  color: #f7931a;
+}
+.main-table-container .main-commissions-table .commissions-table--title {
+  color: #1a9af7;
+}
+.main-table-container .currency-table--container,
+.main-table-container .commissions-table--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+.main-table-container .celda {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  color: #bababa;
+  background-color: #fff;
+  border: 1px solid #f4efef;
+  padding: 10px;
+  text-align: center;
+}
+.main-table-container .currency-table--container .celda__top-left,
+.main-table-container .commissions-table--container .celda__top-left {
+  border-radius: 15px 0 0 0;
+}
+.main-table-container .currency-table--container .celda__top-right,
+.main-table-container .commissions-table--container .celda__top-right {
+  border-radius: 0 15px 0 0;
+}
+.main-table-container .currency-table--container .celda__bottom-left,
+.main-table-container .commissions-table--container .celda__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+.main-table-container .currency-table--container .celda__bottom-right,
+.main-table-container .commissions-table--container .celda__bottom-right {
+  border-radius: 0 0 15px 0;
+}
+.main-table-container .currency-table--container .celda__right,
+.main-table-container .commissions-table--container .celda__right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+.main-table-container .currency-table--container .up {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  background-image: url("../assets/icons/trending-up.svg");
+}
+.main-table-container .currency-table--container .down {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  background-image: url("../assets/icons/trending-down.svg");
+}
+.main-table-container .currency-table--date,
+.main-table-container .commissions-table--date {
+  width: 190px;
+  height: 31px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 8px;
+}
+.main-table-container .currency-table--date {
+  background-color: #ffe9d5;
+}
+.main-table-container .commissions-table--date {
+  background-color: #e7f5ff;
+}
+.main-table-container .currency-table--date p,
+.main-table-container .commissions-table--date p {
+  margin: 7px;
+  font-size: 1rem;
+  line-height: 1.5px;
+}
+
+.main-product-detail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: #282623;
+}
+.main-product-detail .product-detail--batata-logo {
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: -10px;
+  left: calc(50% - 20px);
+  background-image: url("../assets/icons/batata.svg");
+}
+.main-product-detail .product-detail--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+.main-product-detail .product-detail--title h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #fff;
+}
+.main-product-detail .product-detail--title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+.main-product-detail .product-card--container .product-detail--card {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  min-height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: #201e1c;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+.main-product-detail .product-card--container .product-detail--card .clock,
+.main-product-detail .product-card--container .product-detail--card .eye,
+.main-product-detail .product-card--container .product-detail--card .dollar,
+.main-product-detail .product-card--container .product-detail--card .check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-product-detail .product-card--container .product-detail--card .clock {
+  background-image: url("../assets/icons/clock.svg");
+}
+.main-product-detail .product-card--container .product-detail--card .eye {
+  background-image: url("../assets/icons/eye.svg");
+}
+.main-product-detail .product-card--container .product-detail--card .dollar {
+  background-image: url("../assets/icons/dollar-sign.svg");
+}
+.main-product-detail .product-card--container .product-detail--card .check {
+  background-image: url("../assets/icons/check-circle.svg");
+}
+.main-product-detail .product-card--container .product-detail--card .product--card-title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: #fff;
+}
+.main-product-detail .product-card--container .product-detail--card .product--card-body {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+.bitcon-img-container {
+  width: 100%;
+  min-width: 320px;
+  height: 50vh;
+  background-image: url("../assets/imgs/bitcoinbaby2x.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bitcon-img-container h2 {
+  padding-top: 60px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #fff;
+  text-align: center;
+}
+
+.main-plans-container {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 70px;
+  text-align: center;
+  background-color: #faf8f7;
+}
+.main-plans-container .plans--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.main-plans-container .plans--title h2 {
+  margin-top: 50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: black;
+}
+.main-plans-container .plans--title p {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
+}
+.main-plans-container .plans-container--slider {
+  display: flex;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.main-plans-container .plans-container--slider .plans-container--card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 250px;
+  margin: 50px 5px 0;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.main-plans-container .plans-container--slider .plans-container--card .recomendado {
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  top: -15px;
+  left: calc(50% - 60px);
+  font-size: 1.2rem;
+  background-color: #f7931a;
+  border-radius: 8px;
+  color: #fff;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--title {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: black;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--price {
+  padding: 5px 0px;
+  font-size: 5.2rem;
+  font-weight: bold;
+  line-height: 5.3rem;
+  color: black;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--price span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  top: 50px;
+  background-color: aqua;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--saving {
+  font-size: 1.2rem;
+  color: #757575;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--ca {
+  width: 150px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: #faf8f7;
+  border: 2px solid #f7931a;
+  border-radius: 4px;
+  font-family: "DM sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: #201e1c;
+}
+.main-plans-container .plans-container--slider .plans-container--card .plan-info-container .plan-card--ca span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/icons/orange-right-arrow.svg");
+  vertical-align: text-bottom;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: #f7931a;
+}
+footer Section {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+footer Section ul {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+footer Section ul li {
+  margin: 10px 0;
+}
+footer Section ul li a {
+  color: #fff;
+}
+
+@media (min-width: 930px) {
+  .main-exchange-container .main-table-container {
+    display: flex;
+    margin: 0 auto;
+  }
+  .main-product-detail .product-card--container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .main-plans-container .plans-container--slider {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=estilos.css.map */

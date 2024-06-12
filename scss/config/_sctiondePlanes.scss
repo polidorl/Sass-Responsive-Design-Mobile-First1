@@ -1,0 +1,113 @@
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+    background-color: #faf8f7; //borrar
+
+    .plans--title {
+        width: 90%;
+        min-width: 288px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 50px;
+
+        h2 {
+            margin-top: 50px;
+            @include texto(2.4rem, bold, 2.6rem);
+            color: black;
+        }
+
+        p {
+            padding-top: 30px;
+            @include texto(1.4rem, 500, 1.8rem);
+            color: #757575;
+        }
+    }
+
+    .plans-container--slider {
+        //scroll horizontal
+        display: flex;
+        height: 316px;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+
+
+        .plans-container--card {
+            position: relative; //para poder generar el efecto flotante para que la etiqueta siguiente salga un poco de su contenedor, este va a llevar position:absolute.
+            scroll-snap-align: center;
+            width: 70%;
+            min-width: 190px;
+            max-width: 300px;
+            height: 250px;
+            margin: 50px 5px 0;
+            padding: 0 15px;
+            background-color: $just-white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+
+            .recomendado {
+                position: absolute;
+                width: 120px;
+                height: 31px;
+                padding: 6px;
+                top: -15px;
+                left: calc(50% - 60px);
+                font-size: 1.2rem;
+                background-color: $bitcoin-orange;
+                border-radius: 8px;
+                color: $just-white;
+            }
+
+            .plan-info-container {
+                
+                .plan-card--title {
+                    padding-top: 30px;
+                    @include texto(1.4rem, 500, 1.8rem);
+                    color: black;
+                }
+
+                .plan-card--price {
+                    padding: 5px 0px;
+                    @include texto(5.2rem, bold, 5.3rem);
+                    color: black;
+
+                    span {
+                        @include texto(1.2rem, 300, null);
+                        top: 50px;
+                        background-color: aqua; //borrar
+                    }
+                }
+
+                .plan-card--saving {
+                    font-size: 1.2rem;
+                    color: #757575;
+                }
+
+                .plan-card--ca {
+                    width: 150px;
+                    height: 48px;
+                    margin-top: 20px;
+                    background-color: #faf8f7;
+                    border: 2px solid $bitcoin-orange;
+                    border-radius: 4px;
+                    font-family: "DM sans", sans-serif;
+                    @include texto(1.4rem, bold, 1.8rem);
+                    color: $black;
+
+                    span {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        // background-image: url('../../assets/icons/orange-right-arrow.svg');
+                        background-image: url('/assets/icons/orange-right-arrow.svg');
+                        vertical-align: text-bottom;
+                    }
+                }
+            }
+
+
+        }
+    }
+}

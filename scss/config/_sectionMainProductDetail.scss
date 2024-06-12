@@ -1,0 +1,91 @@
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: $warm-black;
+
+    .product-detail--batata-logo {
+        position: absolute;
+        width: 40px;
+        height: 25px;
+        top: -10px;
+        left: calc(50% - 20px);
+        // background-image: url('../../assets/icons/batata.svg');
+        background-image: url('/assets/icons/batata.svg');
+    }
+
+    .product-detail--title {
+        width: 90%;
+        min-width: 288px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+
+        // background-color: rgb(242, 189, 123); //borrar
+        h2 {
+            margin-bottom: 20px;
+            @include texto(2.4rem, bold, 2.6rem);
+            color: $just-white;
+        }
+
+        p {
+            margin-bottom: 20px;
+            @include texto(1.4rem, 500, 1.8rem);
+            color: #808080;
+        }
+    }
+
+    .product-card--container {
+
+        .product-detail--card {
+            width: 90%;
+            min-width: 288px;
+            max-width: 400px;
+            min-height: 150px;
+            margin: 15px auto;
+            padding: 15px;
+            background-color: $black;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+            .clock,
+            .eye,
+            .dollar,
+            .check {
+            @include iconosCard;
+            }
+
+            .clock {
+                // background-image: url('../../assets/icons/clock.svg');
+                background-image: url('/assets/icons/clock.svg');
+            }
+
+            .eye {
+                // background-image: url('../../assets/icons/eye.svg');
+                background-image: url('/assets/icons/eye.svg');
+            }
+
+            .dollar {
+                background-image: url('/assets/icons/dollar-sign.svg');
+            }
+
+            .check {
+                background-image: url('/assets/icons/check-circle.svg');
+            }
+
+            .product--card-title {
+                margin-bottom: 15px;
+                @include texto(1.8rem, bold, 1.8rem);
+                color: $just-white;
+            }
+
+            .product--card-body {
+                @include texto(1.4rem, 500, 1.8rem);
+                color: #808080;
+            }
+
+        }
+    }
+}
